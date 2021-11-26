@@ -30,6 +30,8 @@ gem 'rails-controller-testing'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'solargraph', group: :development
+
 gem 'bcrypt','3.1.13'
 
 group :development, :test do

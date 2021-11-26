@@ -1,12 +1,30 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <%= link_to "sample app" , root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
-        <li><%= link_to "Log in",    '#' %></li>
-      </ul>
-    </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <%= link_to "sample app", root_path,class: "navbar-brand", id: "logo" %>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <nav>
+        <ul class="navbar-nav px-5">
+          <li class="nav-item active"><%= link_to "Home", root_path, class: "nav-link" %></li>
+          <li class="nav-item active"><%= link_to "Help", help_path, class: "nav-link" %></li>
+          <% if logged_in? %>
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
+                <%= link_to "Settings", "#", class: "dropdown-item" %>
+                <%= link_to "Log out", logout_path, class: "dropdown-item" %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item active"><%= link_to "Log in", login_path, class: "nav-link" %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
