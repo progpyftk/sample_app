@@ -13,7 +13,7 @@ User.create!(name: 'Admin User',
              password: 'foobar',
              password_confirmation: 'foobar',
              admin: true,
-             activated: true,
+             activated: false,
              activated_at: Time.zone.now)
 
 # Create a main sample user.
@@ -22,7 +22,7 @@ User.create!(name: 'Example User',
              password: 'foobar',
              password_confirmation: 'foobar',
              admin: true,
-             activated: true,
+             activated: false,
              activated_at: Time.zone.now)
 
 # Generate a bunch of additional users.
@@ -34,6 +34,6 @@ User.create!(name: 'Example User',
                email: email,
                password: password,
                password_confirmation: password,
-               activated: true,
+               activated: false,
                activated_at: Time.zone.now)
 end

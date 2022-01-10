@@ -62,10 +62,10 @@ Rails.application.configure do
   config.assets.quiet = true
 
   config.action_mailer.raise_delivery_errors = false
-  host = 'http://localhost:3000/' # Don't use this literally; use your local dev host instead
+  host = 'http://localhost:3000/' # use your local dev host instead
   # Use this on the cloud IDE.
   # config.action_mailer.default_url_options = { host: host, protocol: 'https' }
-  # Use this if developing on localhost.
+  # Use this if developing on LOCALHOST.
   config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 
   # Raises error for missing translations.
