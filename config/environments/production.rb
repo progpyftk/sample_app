@@ -74,8 +74,8 @@ Rails.application.configure do
     # note that they are accessed via the ENV environment variable instead of being hard-coded
     # $ heroku config:get SENDGRID_USERNAME
     # $ heroku config:get SENDGRID_PASSWORD
-    user_name: 'app234069203@heroku.com'  #ENV['SENDGRID_USERNAME'],
-    password:  '6k8yw7ka0708' #ENV['SENDGRID_PASSWORD'],
+    user_name: 'app234069203@heroku.com',  #ENV['SENDGRID_USERNAME'],
+    password:  '6k8yw7ka0708', #ENV['SENDGRID_PASSWORD'],
     domain: 'heroku.com',
     enable_starttls_auto: true
   }
