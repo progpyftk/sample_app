@@ -60,7 +60,8 @@ class User < ApplicationRecord
     # notar que activation_token trata-se de um atributo virtual, pois nao esta na db
     self.activation_token = User.new_token
     # dentro do model o "self" do lado direito é opcional, logo podemos fazer activation_token
-    self.activation_digest = User.digest(activation_token)
+    puts "Criando o activation_digest"
+    self.activation_digest = User.digest(self.activation_token)
   end
 
   # dentro do model o "self" do lado direito é opcional, por isso podemos fazer email.downcase
